@@ -1,2 +1,2 @@
 # shotsSegmentator
-Simple programs to assist shots' segmentation in different portions.
+Simple programs to assist shots' segmentation in different portions
