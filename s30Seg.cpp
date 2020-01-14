@@ -7,9 +7,14 @@ void writeNewShots(const pair<string, string> &shot, ofstream &outputFile){
 
 	int interval = floor((sec - fir) * 33 / 100);
 
-	outputFile << fir << "\t" << fir + interval << endl;
-	outputFile << fir + interval + 1 << "\t" << fir + interval * 2 + 1 << endl;
-	outputFile << fir + interval * 2 + 2 << "\t" << sec << endl;
+	if(interval > 50){
+		outputFile << fir << "\t" << fir + interval << endl;
+		outputFile << fir + interval + 1 << "\t" << fir + interval * 2 + 1 << endl;
+		outputFile << fir + interval * 2 + 2 << "\t" << sec << endl;
+	}
+	else{
+		outputFile << fir << "\t" << sec << endl;
+	}
 }
 
 void readOriginalShots(ifstream &inputFile, ofstream &outputFile){
