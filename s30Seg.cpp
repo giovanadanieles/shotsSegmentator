@@ -5,12 +5,12 @@ void writeNewShots(const pair<string, string> &shot, ofstream &outputFile){
 	int fir = atoi(shot.first.c_str());
 	int sec = atoi(shot.second.c_str());
 
-	int interval = floor((sec - fir) * 33 / 100);
+	int range = floor((sec - fir) * 33 / 100);
 
-	if(interval > 50){
-		outputFile << fir << "\t" << fir + interval << endl;
-		outputFile << fir + interval + 1 << "\t" << fir + interval * 2 + 1 << endl;
-		outputFile << fir + interval * 2 + 2 << "\t" << sec << endl;
+	if(range > 50){
+		outputFile << fir << "\t" << fir + range << endl;
+		outputFile << fir + range + 1 << "\t" << fir + range * 2 + 1 << endl;
+		outputFile << fir + range * 2 + 2 << "\t" << sec << endl;
 	}
 	else{
 		outputFile << fir << "\t" << sec << endl;
@@ -39,6 +39,7 @@ int main(){
 
 	if(!inputFile){
 		cout << "Error" << endl;
+
 		return -1;
 	}
 	else{
