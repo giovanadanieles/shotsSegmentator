@@ -39,7 +39,8 @@ int main(){
 
 	if(!inputFile){
 		cout << "Error" << endl;
-		return -1;
+		
+                return -404;
 	}
 	else{
 		readOriginalShots(inputFile, outputFile);
