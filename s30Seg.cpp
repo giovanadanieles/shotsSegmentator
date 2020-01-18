@@ -7,7 +7,7 @@ void writeNewShots(const pair<string, string> &shot, ofstream &outputFile){
 
 	int range = floor((sec - fir) * 33 / 100);
 
-	if(range > 50){
+	if(range > 10){
 		outputFile << fir << "\t" << fir + range << endl;
 		outputFile << fir + range + 1 << "\t" << fir + range * 2 + 1 << endl;
 		outputFile << fir + range * 2 + 2 << "\t" << sec << endl;
