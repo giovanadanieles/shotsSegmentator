@@ -42,7 +42,7 @@ int main(){
 		return -1;
 	}
 	else{
-        ofstream outputFile("fragShots.csv");
+        	ofstream outputFile("fragShots.csv");
 
 		readOriginalShots(inputFile, outputFile);
 
