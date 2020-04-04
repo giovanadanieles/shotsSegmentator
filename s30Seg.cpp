@@ -35,7 +35,6 @@ int main(){
 	string filename; cin >> filename;
 
 	ifstream inputFile( filename.c_str() );
-	ofstream outputFile("fragShots.csv");
 
 	if(!inputFile){
 		cout << "Error" << endl;
@@ -43,6 +42,8 @@ int main(){
 		return -1;
 	}
 	else{
+        ofstream outputFile("fragShots.csv");
+
 		readOriginalShots(inputFile, outputFile);
 
 		inputFile.close();
