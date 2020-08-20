@@ -157,7 +157,7 @@ int main(int argc, char* const argv[]){
     		return -1;
     	}
     	else{
-            ofstream outputFile("sSegAj.csv");
+            ofstream outputFile(outputName);
 
     		translate(shotsOL, shotsOR, shotsM, sSeg, outputFile);
 
