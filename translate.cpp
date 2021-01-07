@@ -137,7 +137,7 @@ int main(int argc, char* const argv[]){
         // Definindo nome do arquivo final
         string outputName;
 
-        int i;
+        int i = 0;
         while(argv[3][i] != '.' || argv[3][i+1] != 'c'){
             outputName += argv[3][i];
 
@@ -159,13 +159,13 @@ int main(int argc, char* const argv[]){
     	else{
             ofstream outputFile(outputName);
 
-    		translate(shotsOL, shotsOR, shotsM, sSeg, outputFile);
+    	    translate(shotsOL, shotsOR, shotsM, sSeg, outputFile);
 
-    		shotsOL.close();
+    	    shotsOL.close();
             shotsOR.close();
             shotsM.close();
             sSeg.close();
-    		outputFile.close();
+    	    outputFile.close();
     	}
     }
 
